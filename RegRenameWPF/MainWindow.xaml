@@ -5,8 +5,83 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegRenameWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800"
+        AllowDrop="True" DragOver="MainWindow_OnDragOver" DragLeave="MainWindow_OnDragLeave" DragEnter="MainWindow_OnDragEnter" Drop="MainWindow_OnDrop"
+        DataContext="{Binding RelativeSource={RelativeSource self}}">
+    <DockPanel LastChildFill="True">
+        <!--Input Fields-->
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="True">
+            <Button DockPanel.Dock="Right" Content="Rename" Click="RenameButton_OnClick"></Button>
+            <Button DockPanel.Dock="Right" Content="Preview" Click="PreviewButton_OnClick"></Button>
+            <Grid DockPanel.Dock="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Column="0" LastChildFill="True">
+                    <Label Content="Pattern"></Label>
+                    <TextBox Text="{Binding Pattern}"></TextBox>
+                </DockPanel>
+                <DockPanel Grid.Column="1" LastChildFill="True">
+                    <Label Content="Replacement"></Label>
+                    <TextBox Text="{Binding Replacement}"></TextBox>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+        
+        <!--Name Fields-->
+        <StackPanel DockPanel.Dock="Top">
+            <Label Content="File Paths:"></Label>
+            <ItemsControl ItemsSource="{Binding FilePaths}" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                          BorderThickness="1" BorderBrush="Gray"
+                          Background="Black">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding}" Background="IndianRed"></Label>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        
+            <Label Content="Old File Names:"></Label>
+            <ItemsControl ItemsSource="{Binding OldFileNames}" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                          BorderThickness="1" BorderBrush="Gray"
+                          Background="Black">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding}" Background="CadetBlue"></Label>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        
+            <Label Content="New File Names:"></Label>
+            <ItemsControl ItemsSource="{Binding NewFileNames}" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                          BorderThickness="1" BorderBrush="Gray"
+                          Background="Black">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding}" Background="SeaGreen"></Label>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </DockPanel>
 </Window>
+
