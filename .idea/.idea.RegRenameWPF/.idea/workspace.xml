@@ -7,7 +7,6 @@
     <list default="true" id="6656174c-1814-48d7-847d-8e0d0f9b7cbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RegRenameWPF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RegRenameWPF/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +18,8 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml" />
       <option value="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml.cs" />
+      <option value="$PROJECT_DIR$/RegRenameWPF/MainWindow.xaml" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="284l5eG1JRcnBrHWYRKXjPPtu3D" />
@@ -37,7 +36,11 @@
     <property name="XThreadsFramesViewSplitterKey" value="0.44921875" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.RegRenameWPF">
+    <configuration name="Publish RegRenameWPF to folder" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/Publish" target_framework="netcoreapp3.1" uuid_high="-9024150655894011851" uuid_low="-4767204298778561049" />
+      <method v="2" />
+    </configuration>
     <configuration name="RegRenameWPF" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -56,6 +59,11 @@
         <option name="Build" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Publish to folder.Publish RegRenameWPF to folder" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,14 +73,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650483557047</updated>
-      <workItem from="1650483576545" duration="3859000" />
+      <workItem from="1650483576545" duration="4257000" />
+      <workItem from="1650647603413" duration="237000" />
+      <workItem from="1652039619294" duration="630000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

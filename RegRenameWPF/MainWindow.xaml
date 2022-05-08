@@ -30,58 +30,78 @@
         </DockPanel>
         
         <!--Name Fields-->
-        <StackPanel DockPanel.Dock="Top">
-            <Label Content="File Paths:"></Label>
-            <ItemsControl ItemsSource="{Binding FilePaths}" 
-                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                          BorderThickness="1" BorderBrush="Gray"
-                          Background="Black">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Label Content="{Binding}" Background="IndianRed"></Label>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <DockPanel LastChildFill="True" Grid.Row="0" Grid.ColumnSpan="2">
+                <Label Content="File Paths:" DockPanel.Dock="Top"></Label>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding FilePaths}" 
+                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                  BorderThickness="1" BorderBrush="Gray"
+                                  Background="DarkGray">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding}" Background="IndianRed"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>    
+            </DockPanel>
         
-            <Label Content="Old File Names:"></Label>
-            <ItemsControl ItemsSource="{Binding OldFileNames}" 
-                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                          BorderThickness="1" BorderBrush="Gray"
-                          Background="Black">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Label Content="{Binding}" Background="CadetBlue"></Label>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            <DockPanel LastChildFill="True" Grid.Row="1" Grid.Column="0">
+                <Label Content="Old File Names:" DockPanel.Dock="Top"></Label>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding OldFileNames}" 
+                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                  BorderThickness="1" BorderBrush="Gray"
+                                  Background="DarkGray">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding}" Background="CadetBlue"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
         
-            <Label Content="New File Names:"></Label>
-            <ItemsControl ItemsSource="{Binding NewFileNames}" 
-                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                          BorderThickness="1" BorderBrush="Gray"
-                          Background="Black">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Label Content="{Binding}" Background="SeaGreen"></Label>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </StackPanel>
+            <DockPanel LastChildFill="True" Grid.Row="1" Grid.Column="1">
+                <Label Content="New File Names:" DockPanel.Dock="Top"></Label>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding NewFileNames}" 
+                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                  BorderThickness="1" BorderBrush="Gray"
+                                  Background="DarkGray">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding}" Background="SeaGreen"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
+        </Grid>
     </DockPanel>
 </Window>
 
